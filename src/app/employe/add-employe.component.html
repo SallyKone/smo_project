@@ -1,0 +1,74 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<div >
+  <div class=" card card-primary card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom">
+    <div class="card-header">
+      <h3 class="card-title">Ajouter un employé</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form  (ngSubmit)="createEmploye()">
+
+      <div class="card-body">
+        <div class="form-group">
+          <label>Type Employé</label>
+          <select class="form-control"  [(ngModel)]="employe.type_employe" name="type_employe" >
+            <option>Vigile</option>
+            <option>Staff</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" class="form-control"  [(ngModel)]="employe.nom" placeholder="Entrer votre Nom" name="nom">
+        </div>
+        <div class="form-group">
+          <label>Date Naissance</label>
+          <input type="date" class="form-control"  [(ngModel)]="employe.dateNaissance" name="dateNaissance"  placeholder="Date Naissance">
+        </div>
+        <div class="form-group">
+          <label>Type Pièce</label>
+          <select class="form-control"  [(ngModel)]="employe.typePiece" name="typePiece">
+            <option>CNI</option>
+            <option>PASSPORT</option>
+            <option>PERMIS</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Numero Pièce</label>
+          <input type="text" class="form-control"  [(ngModel)]="employe.cni" name="cni"  placeholder="Numero Pièce">
+        </div>
+        <div class="form-group">
+          <label>Domicile</label>
+          <input type="text" class="form-control"  [(ngModel)]="employe.domicile" name="domicile"  placeholder="Domicile">
+        </div>
+        <div class="form-group">
+          <label >Login</label>
+          <input type="text" class="form-control"  [(ngModel)]="employe.login" name="login"  placeholder="Login">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control"   [(ngModel)]="employe.password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label >Photo</label>
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" [(ngModel)]="employe.photo" name="photo"  >
+              <label class="custom-file-label">Choisir un fichier</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text" id="">Télécharger</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.card-body -->
+
+      <div class="card-footer">
+        <button type="ngSubmit" class="btn btn-primary">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

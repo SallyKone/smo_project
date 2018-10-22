@@ -1,0 +1,50 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<div class="card card-primary card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom">
+  <div class="card-header">
+    <h3 class="card-title">Ajouter un pointage</h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form role="form" (ngSubmit)="createPointage()">
+    <div class="card-body">
+      <div class="form-group">
+        <label >Date Pointage</label>
+        <input type="date" class="form-control" [(ngModel)]="pointage.date_pointage" name="date_pointage"  placeholder="date">
+      </div>
+      <div class="form-group">
+        <label >Heure</label>
+        <input type="time" class="form-control" [(ngModel)]="pointage.heure" name="heure"  placeholder="Heure">
+
+      </div>
+      <div class="form-group">
+        <label >Etat</label>
+        <input type="boolean" class="form-control" [(ngModel)]="pointage.etat" name="etat"  placeholder="Etat">
+      </div>
+      <div class="form-group">
+        <label >Longitude</label>
+        <input type="number" class="form-control" [(ngModel)]="pointage.longitude" name="longitude"  placeholder="Longitude">
+      </div>
+      <div class="form-group">
+        <label >Latitude</label>
+        <input type="number" class="form-control" [(ngModel)]="pointage.latitude"  name="latitude" placeholder="latitude">
+      </div>
+      <div class="form-group">
+        <label >Employe</label>
+        <input type="number" class="form-control" [(ngModel)]="pointage.employe" name="employe"  placeholder="employe">
+      </div>
+      <div class="form-group">
+        <label >Site</label>
+        <input type="number" class="form-control" [(ngModel)]="pointage.site" name="site"  placeholder="Site">
+      </div>
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+      <button type="ngSubmit" class="btn btn-primary">Ajouter</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

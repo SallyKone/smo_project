@@ -1,0 +1,60 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<div class="card card-primary card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom">
+  <div class="card-header">
+    <h3 class="card-title">Ajouter un client</h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form (ngSubmit)="updateClient()">
+    <div class="card-body">
+      <div class="form-group">
+        <label>Type Client</label>
+        <select class="form-control"  [(ngModel)]="client.type_client" name="type_client" >
+          <option>PP</option>
+          <option>PM</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label >Nom</label>
+        <input type="text" class="form-control"   [(ngModel)]="client.nom" name="nom" placeholder="Nom">
+      </div>
+      <div class="form-group">
+        <label >Prenom</label>
+        <input type="text" class="form-control"   [(ngModel)]="client.prenom" name="prenom" placeholder="Prenom">
+      </div>
+      <div class="form-group">
+        <label >Email</label>
+        <input type="email" class="form-control"   [(ngModel)]="client.email" name="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label >Nationnalité</label>
+        <input type="text" class="form-control"  [(ngModel)]="client.nationnalite" name="nationnalite" placeholder="Nationnalite">
+      </div>
+      <div class="form-group">
+        <label >Adresse</label>
+        <input type="text" class="form-control"  [(ngModel)]="client.adresse" name="adresse" placeholder="Adresse">
+      </div>
+      <div class="form-group">
+        <label >Telephone</label>
+        <input type="number" class="form-control"  [(ngModel)]="client.telephone" name="telephone" placeholder="Telephone">
+      </div>
+      <div class="form-group">
+        <label>Fax</label>
+        <input type="number" class="form-control"  [(ngModel)]="client.fax" name="fax" placeholder="Fax">
+      </div>
+      <div class="form-group">
+        <label >Sigle</label>
+        <input type="text" class="form-control" [(ngModel)]="client.sigle" name="sigle" placeholder="Sigle">
+      </div>
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+      <button type="Submit" class="btn btn-primary">Modifier</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

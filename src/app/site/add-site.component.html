@@ -1,0 +1,38 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<div class="card card-primary card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom">
+  <div class="card-header">
+    <h3 class="card-title">Ajouter un site</h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form role="form" (ngSubmit)="onSubmit()">
+    <div class="card-body">
+      <div class="form-group">
+        <label >Nom</label>
+        <input type="text" class="form-control" [(ngModel)]="site.nom" name="nom" placeholder="Entrer votre nom">
+      </div>
+      <div class="form-group">
+        <label >Latitude</label>
+        <input type="number" class="form-control"  [(ngModel)]="site.latitude" name="latitude" placeholder="Latitude">
+      </div>
+      <div class="form-group">
+        <label>Longitude</label>
+        <input type="number" class="form-control" [(ngModel)]="site.longitude" name="longitude" placeholder="Longitude">
+      </div>
+      <div class="form-group">
+        <label>Client</label>
+        <input type="text" class="form-control" [(ngModel)]="site.client" name="client" placeholder="">
+      </div>
+
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+      <button type="ngSubmit" class="btn btn-primary">Ajouter</button>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

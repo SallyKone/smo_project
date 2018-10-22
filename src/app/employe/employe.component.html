@@ -1,0 +1,44 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<div class="scroll card card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom ">
+  <h2> Liste des employés</h2>
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th>Type_employé</th>
+      <th hidden >Id </th>
+      <th>CNI</th>
+      <th>Date_Naissance</th>
+      <th>Domicile</th>
+      <th hidden>Login</th>
+      <th>Nom</th>
+      <th hidden>Password</th>
+      <th>Photo</th>
+      <th hidden>Type Piece</th>
+      <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody >
+    <tr *ngFor="let employe of employes">
+      <td >{{employe.type_employe}}</td>
+      <td hidden>{{employe.id_employe}}</td>
+      <td>{{employe.cni}}</td>
+      <td>{{employe.dateNaissance}}</td>
+      <td>{{employe.domicile}}</td>
+      <td hidden>{{employe.login}}</td>
+      <td>{{employe.nom}}</td>
+      <td hidden>{{employe.password}}</td>
+      <td>{{employe.photo}}</td>
+      <td hidden>{{employe.typePiece}}</td>
+      <!--<td>{{employes.pointage}}</td>-->
+      <td><button class="btn btn-danger" (click)="addEmploye()" > Ajouter</button>
+        <button class="btn btn-danger" (click)="deleteEmploye(employe)" style="margin-left: 20px;"> Supprimer</button>
+        <button class="btn btn-danger" style="margin-left: 20px;"(click)="updateEmploye(employe)"> Modifier</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>

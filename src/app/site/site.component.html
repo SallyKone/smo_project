@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<div class="scroll card card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom ">
+  <h2> Liste des sites</h2>
+
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th >Id </th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Nom</th>
+      <th>Client</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr *ngFor="let site of sites">
+      <td>{{site.idSite}}</td>
+      <td>{{site.latitude}}</td>
+      <td>{{site.longitude}}</td>
+      <td>{{site.nom}}</td>
+      <td>{{site.client}}</td>
+      <td><button class="btn btn-danger" (click)="addSite()"> Ajouter</button>
+        <button class="btn btn-danger" style="margin-left: 20px;" (click)="deleteSite(site)"> Supprimer</button>
+        <button class="btn btn-danger" style="margin-left: 20px;"(click)="updateSite(site)"> Modifier</button></td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<app-menu></app-menu>
+<div class="scroll card card-primary main-header navbar navbar-expand bg-white navbar-light border-bottom ">
+<h2> Pointage Details</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th hidden>Id</th>
+    <th>Heure</th>
+    <th>Date Pointage</th>
+    <th>Etat</th>
+    <th>Longitude</th>
+    <th>Latitude</th>
+    <th>Employé</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pointage of pointages">
+    <td hidden>{{pointage.numero}}</td>
+    <td>{{pointage.heure}}</td>
+    <td>{{pointage.date_pointage}}</td>
+    <td>{{pointage.etat}}</td>
+    <td>{{pointage.longitude}}</td>
+    <td>{{pointage.latitude}}</td>
+    <td>{{pointage.employe}}</td>
+    <td><button class="btn btn-danger" (click)="addPointage()"> Ajouter</button>
+      <button class="btn btn-danger" style="margin-left: 20px;" (click)="deletePointage(pointage)"> Supprimer</button>
+      <button class="btn btn-danger" style="margin-left: 20px;" (click)="updatePointage(pointage)" > Modifier</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<app-footer></app-footer>
